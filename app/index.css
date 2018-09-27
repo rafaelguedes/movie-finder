@@ -1,0 +1,295 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  background: #fff;
+}
+
+.not-found {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+}
+
+.not-found h1 {
+  font-size: 30px;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 980px) {
+  .container {
+    width: 775px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .container {
+    width: 550px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 350px;
+  }
+}
+
+.home-container {
+  width: 100%;
+}
+
+.header {
+ width: 100%;
+ height: 75px;
+ display: flex;
+ align-items: center;
+ border-bottom: 1px solid #eee;
+}
+
+.logo {
+  margin: 5px 0;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #000;
+}
+
+.logo p {
+  font-size: 2rem;
+}
+
+.releases {
+  width: 100%;
+}
+
+.releases-heading {
+  margin: 20px 0;
+}
+
+.releases-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.releases-grid-item {
+  background-color: gray;
+  background-size: cover;
+  width: 22%;
+  height: 335px;
+  box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+  position: relative; 
+  margin: 20px 0;
+}
+
+@media only screen and (max-width: 980px) {
+  .releases-grid-item {
+    width: 30%;
+    height: 335px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .releases-grid-item {
+    width: 48%;
+    height: 435px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .releases-grid-item {
+    width: 98%;
+    height: 550px;
+  }
+}
+
+.releases-grid-item-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  background-color: #000;
+  color: #fff;
+  transition: all .2s;
+  text-align: center;
+  z-index: 100;
+}
+
+.releases-grid-item-image,
+.releases-grid-item-info {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.releases-grid-item-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.releases-grid-item:hover 
+> .releases-grid-item-info{
+  opacity: 1;
+  cursor: pointer;
+}
+
+.detail-container {
+  width: 100%;
+}
+
+.detail-info-container {
+  margin-top: 20px;
+}
+
+.detail-info-data {
+  display: flex;
+}
+
+@media only screen and (max-width: 800px) {
+  .detail-info-data  {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.detail-info-data-poster {
+  box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+}
+
+@media only screen and (max-width: 800px) {
+  .detail-info-data-poster {
+   margin-bottom: 50px;
+  }
+}
+
+.detail-info-data-text {
+  margin-left: 18px;
+}
+
+@media only screen and (max-width: 800px) {
+  .detail-info-data-text {
+    margin-left: 0px;
+  }
+}
+
+.detail-info-data-text h1 {
+  margin: 0 0 20px 0;
+}
+
+.detail-info-data-text h2 {
+  margin: 10px 0;
+}
+
+.detail-info-data-text p {
+  margin: 20px 0;
+  font-size: 15px;
+  line-height: 2;
+}
+
+.detail-info-cast {
+  margin-top: 20px;
+}
+
+.detail-info-cast-grid {
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.detail-info-cast-grid h2 {
+  margin: 5px;
+  text-align: center;
+}
+
+.detail-info-cast-item {
+  background-color: gray;
+  background-size: cover;
+  width: 150px;
+  height: 245px;
+  box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+}
+
+.search-container {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.search-input {
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid gray;
+  position: relative;
+}
+
+.search-input input {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  padding: 10px 45px;
+}
+
+.search-input input:focus {
+  outline: none;
+}
+
+.search-input-icon {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.search-results {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid gray;
+  margin-top: 2px;
+}
+
+.search-results-item {
+  display: flex;
+}
+
+.search-results-poster {
+  margin: 10px;
+  width: 15%;
+}
+
+.search-results-poster img {
+  width: 100%;
+}
+
+.search-results-info {
+  margin: 10px;
+}
+
+.search-results-info h1 {
+  margin-bottom: 20px;
+}
